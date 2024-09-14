@@ -1,0 +1,173 @@
+body {
+    font-family: 'DotGothic16', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/wickedbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+h2 {
+    margin-top: 70px; 
+}
+
+/* ゲーム選択画面のスタイル */
+#game-selection-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 70px;
+}
+
+
+/* ゲーム選択オプションのスタイル */
+.game-option {
+    width: 300px;
+    background-color: aliceblue;
+    border: 2px solid rgb(199, 229, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.game-option:hover {
+    transform: scale(1.05);
+    background-color: rgb(199, 229, 255);
+}
+
+.game-option img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.game-option .game-title {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 各ゲーム画面の共通スタイル */
+.game-screen {
+    display: none; /* トップ画面では非表示にする */
+    text-align: center;
+    padding: 20px;
+}
+
+canvas {
+    border: 2px solid rgb(199, 229, 255);
+    background-color: aliceblue;
+    display: block;
+    margin: 20px auto;
+    max-width: 800px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+}
+
+/* スコア表示のスタイル */
+#score, #sky-challenge-score, #hide-and-seek-score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* ボタンの共通スタイル */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: aliceblue;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+button:hover {
+    background-color: rgb(199, 229, 255);
+}
+
+/* 戻るボタン */
+#back-to-main-game, #back-to-main-sky {
+    display: block;
+    margin: 0 auto;
+}
+
+#back-to-main-hide {
+    display: block;
+    margin: 20px auto;
+}
+
+/* トップ画面のスタイル */
+#top-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#top-illustration {
+    width: 440px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#game-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* 点滅するスタートボタンのスタイル */
+#game-btn {
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+#blink-text {
+    animation: blink 1.3s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+#game-btn:hover {
+    background-color: rgb(199, 229, 255);
+}
+
+/* フッターメッセージのスタイル */
+#footer-message {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+
+
+
+
